@@ -1,0 +1,231 @@
+{
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^u-(.*)": "uview-pro/components/u-$1/u-$1.vue",
+            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+        }
+    },
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "enablePullDownRefresh": false,
+                "navigationStyle": "custom",
+                "backgroundColorTop": "#ff6b6b",
+                "navigationBarTextStyle": "white"
+            }
+        },
+        {
+            "path": "pages/youpei/index",
+            "style": {
+                "enablePullDownRefresh": false,
+                "navigationBarTitleText": "优培",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/user",
+            "style": {
+                "enablePullDownRefresh": true,
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/login/login",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        },
+        {
+            "path": "pages/register/register",
+            "style": {
+                "navigationBarTitleText": "注册",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/activity/index",
+            "style": {
+                "navigationBarTitleText": "志愿活动",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/activity/detail",
+            "style": {
+                "navigationBarTitleText": "活动详情",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/activity/signup",
+            "style": {
+                "navigationBarTitleText": "活动报名",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/activity/checkin",
+            "style": {
+                "navigationBarTitleText": "活动签到",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/notice/index",
+            "style": {
+                "navigationBarTitleText": "通知公告",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/notice/detail",
+            "style": {
+                "navigationBarTitleText": "公告详情",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/profile",
+            "style": {
+                "navigationBarTitleText": "个人资料",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationStyle":"custom",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/about",
+            "style": {
+                "navigationBarTitleText": "关于我们",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/feedback",
+            "style": {
+                "navigationBarTitleText": "意见反馈",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/feedback-detail",
+            "style": {
+                "navigationBarTitleText": "反馈详情",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/volunteer-list",
+            "style": {
+                "navigationBarTitleText": "我的小雷锋",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/user/add-volunteer",
+            "style": {
+                "navigationBarTitleText": "添加小雷锋",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/volunteer-detail",
+            "style": {
+                "navigationStyle": "custom",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/edit-volunteer",
+            "style": {
+                "navigationStyle": "custom",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+        {
+            "path": "pages/user/my-activities",
+            "style": {
+                "navigationBarTitleText": "我的活动",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/user/service-record",
+            "style": {
+                "navigationBarTitleText": "服务记录",
+                "backgroundColorTop": "#FFFFFF",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "enablePullDownRefresh": true
+            }
+        }
+
+    ],
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#ff6b6b",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "custom": false,
+        "height": "50px",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/static/images/tab_home.png",
+                "selectedIconPath": "/static/images/tab_home_s.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "iconPath": "/static/images/tab_user.png",
+                "selectedIconPath": "/static/images/tab_user_s.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "backgroundColor": "#F8F8F8",
+        "h5": {
+            "navigationStyle": "custom"
+        }
+    }
+}

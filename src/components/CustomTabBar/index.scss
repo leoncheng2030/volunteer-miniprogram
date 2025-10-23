@@ -1,0 +1,232 @@
+.custom-tabbar {
+    position: relative;
+    width: 100%;
+
+    background-color: #ffffff;
+    // 使用padding-bottom处理安全区域
+    // padding-bottom: constant(safe-area-inset-bottom);
+    // padding-bottom: env(safe-area-inset-bottom);
+    border-top: 1rpx solid #e5e5e5;
+
+    padding-bottom: 20rpx;
+
+    // 导航项容器
+    .tabbar-content {
+        position: relative;
+        display: flex;
+
+        z-index: 2;
+    }
+
+    // 普通导航项
+    .tab-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8rpx 0;
+
+        .tab-icon {
+            width: 44rpx;
+            height: 44rpx;
+        }
+
+        .tab-label {
+            font-size: 20rpx;
+            color: #999;
+            margin-top: 4rpx;
+            line-height: 1;
+        }
+
+        &.active .tab-label {
+            color: #ff6b6b;
+        }
+    }
+
+    // 扫码按钮占位
+    .scan-placeholder {
+        width: 140rpx;
+        height: 100rpx;
+    }
+
+    // 中间扫码按钮
+    .scan-button {
+        position: absolute;
+        left: 50%;
+        top: -30rpx;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+
+        .scan-btn-inner {
+            width: 100rpx;
+            height: 100rpx;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6rpx 16rpx rgba(255, 107, 107, 0.3);
+            margin-bottom: 4rpx;
+            position: relative;
+
+            // 光晕动画
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10rpx;
+                left: -10rpx;
+                right: -10rpx;
+                bottom: -10rpx;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(255, 107, 107, 0.4) 0%, rgba(255, 107, 107, 0.1) 70%, transparent 100%);
+                animation: glow-pulse 2s ease-in-out infinite;
+                z-index: -1;
+            }
+
+            // 第二层光晕
+            &::after {
+                content: "";
+                position: absolute;
+                top: -20rpx;
+                left: -20rpx;
+                right: -20rpx;
+                bottom: -20rpx;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, rgba(255, 107, 107, 0.05) 50%, transparent 100%);
+                animation: glow-pulse 2s ease-in-out infinite 0.5s;
+                z-index: -2;
+            }
+
+            .scan-icon-wrapper {
+                width: 36rpx;
+                height: 36rpx;
+                position: relative;
+
+                // 扫码框的四个角
+                .scan-corner {
+                    position: absolute;
+
+                    &.scan-corner-tl {
+                        top: 0;
+                        left: 0;
+                        width: 10rpx;
+                        height: 3rpx;
+                        background: #ffffff;
+                        border-radius: 1rpx;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 3rpx;
+                            height: 10rpx;
+                            background: #ffffff;
+                            border-radius: 1rpx;
+                        }
+                    }
+
+                    &.scan-corner-tr {
+                        top: 0;
+                        right: 0;
+                        width: 10rpx;
+                        height: 3rpx;
+                        background: #ffffff;
+                        border-radius: 1rpx;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 3rpx;
+                            height: 10rpx;
+                            background: #ffffff;
+                            border-radius: 1rpx;
+                        }
+                    }
+
+                    &.scan-corner-bl {
+                        bottom: 0;
+                        left: 0;
+                        width: 10rpx;
+                        height: 3rpx;
+                        background: #ffffff;
+                        border-radius: 1rpx;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 3rpx;
+                            height: 10rpx;
+                            background: #ffffff;
+                            border-radius: 1rpx;
+                        }
+                    }
+
+                    &.scan-corner-br {
+                        bottom: 0;
+                        right: 0;
+                        width: 10rpx;
+                        height: 3rpx;
+                        background: #ffffff;
+                        border-radius: 1rpx;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 3rpx;
+                            height: 10rpx;
+                            background: #ffffff;
+                            border-radius: 1rpx;
+                        }
+                    }
+                }
+
+                // 中间的扫描线
+                .scan-line {
+                    position: absolute;
+                    top: 50%;
+                    left: 8rpx;
+                    right: 8rpx;
+                    height: 2rpx;
+                    background: #ffffff;
+                    transform: translateY(-50%);
+                    border-radius: 1rpx;
+                }
+            }
+        }
+
+        .scan-text {
+            font-size: 20rpx;
+            color: #ff6b6b;
+            line-height: 1;
+            margin-top: 4rpx;
+        }
+
+        &:active .scan-btn-inner {
+            transform: scale(0.95);
+        }
+    }
+}
+
+// 光晕脉冲动画
+@keyframes glow-pulse {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
